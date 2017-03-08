@@ -54,6 +54,7 @@
 		6E4842A41E6F9B210097D1A0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E48429B1E6F9B210097D1A0 /* SVProgressHUD.bundle */; };
 		6E4842A51E6F9B210097D1A0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E48429D1E6F9B210097D1A0 /* SVProgressHUD.m */; };
 		6E4842A61E6F9B210097D1A0 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E48429F1E6F9B210097D1A0 /* SVRadialGradientLayer.m */; };
+		6E4842A81E6FA3FF0097D1A0 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4842A71E6FA3FF0097D1A0 /* back.png */; };
 		6EBBD00C1E6EB3CE001B3C73 /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBBD00B1E6EB3CE001B3C73 /* TouchView.m */; };
 		6EBBD00E1E6EB3D7001B3C73 /* TouchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EBBD00D1E6EB3D7001B3C73 /* TouchView.xib */; };
 /* End PBXBuildFile section */
@@ -154,6 +155,7 @@
 		6E48429D1E6F9B210097D1A0 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		6E48429E1E6F9B210097D1A0 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		6E48429F1E6F9B210097D1A0 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		6E4842A71E6FA3FF0097D1A0 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		6EBBD00A1E6EB3CE001B3C73 /* TouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
 		6EBBD00B1E6EB3CE001B3C73 /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
 		6EBBD00D1E6EB3D7001B3C73 /* TouchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchView.xib; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 		6E2EADB31E6EA8BB00A22F5E /* TOUCHID */ = {
 			isa = PBXGroup;
 			children = (
+				6E4842A71E6FA3FF0097D1A0 /* back.png */,
 				6EBBD00A1E6EB3CE001B3C73 /* TouchView.h */,
 				6EBBD00B1E6EB3CE001B3C73 /* TouchView.m */,
 				6EBBD00D1E6EB3D7001B3C73 /* TouchView.xib */,
@@ -448,6 +451,7 @@
 			files = (
 				6E2EAD3C1E6E3DCC00A22F5E /* LaunchScreen.storyboard in Resources */,
 				6E2EAD7E1E6E643800A22F5E /* HomeTBVC.xib in Resources */,
+				6E4842A81E6FA3FF0097D1A0 /* back.png in Resources */,
 				6EBBD00E1E6EB3D7001B3C73 /* TouchView.xib in Resources */,
 				6E4842A41E6F9B210097D1A0 /* SVProgressHUD.bundle in Resources */,
 				6E2EAD391E6E3DCC00A22F5E /* Assets.xcassets in Resources */,

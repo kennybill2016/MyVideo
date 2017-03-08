@@ -13,6 +13,7 @@
 #import "HomeDataModel.h"
 #import "HomeDataSouce.h"
 #import "SVProgressHUD.h"
+#import "SaveObject.h"
 #define FILEPATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 @interface HomeVC ()<DeleDelegate,DataDelegate>
 
@@ -50,6 +51,7 @@
     self.dataModel = [[HomeDataModel alloc] init];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back"]];
     [self.tableView registerNib:[UINib nibWithNibName:@"HomeTBVC" bundle:nil] forCellReuseIdentifier:@"cellId"];
     
     self.delegateHome = [[HomeDelegate alloc] init];
@@ -86,26 +88,40 @@
     [self.tableView reloadData];
 }
 - (void)setController{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"设置启动密码并启用TouchID" preferredStyle:UIAlertControllerStyleAlert];
-    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.placeholder = @"请输入启动密码";
-    }];
-    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.placeholder = @"请再次启动密码";
-    }];
-    UIAlertAction *setction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        if ([alert.textFields.firstObject.text isEqualToString:alert.textFields.lastObject.text]) {
-            [SVProgressHUD showSuccessWithStatus:@"设置成功"];
-        }
-    }];
-    UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        
-    }];
-    [alert addAction:setction];
-    [alert addAction:cancleAction];
-    [self presentViewController:alert animated:YES completion:^{
-        
-    }];
+    if ([[SaveObject shared] readLoginPassword]) {
+        [[SaveObject shared] removeLoginPassword];
+        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+        [SVProgressHUD showSuccessWithStatus:@"密码已清除"];
+    }else{
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"设置启动密码并启用TouchID" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            textField.placeholder = @"请输入启动密码";
+            textField.secureTextEntry = YES;
+        }];
+        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            textField.placeholder = @"请再次启动密码";
+            textField.secureTextEntry = YES;
+        }];
+        UIAlertAction *setction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            if ([alert.textFields.firstObject.text isEqualToString:alert.textFields.lastObject.text]) {
+                [[SaveObject shared] saveLoginPassword:alert.textFields.firstObject.text];
+                [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+                [SVProgressHUD showSuccessWithStatus:@"设置成功"];
+            }else{
+                [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+                [SVProgressHUD showErrorWithStatus:@"设置失败，两次密码不一致"];
+            }
+        }];
+        UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        [alert addAction:setction];
+        [alert addAction:cancleAction];
+        [self presentViewController:alert animated:YES completion:^{
+            
+        }];
+    }
+
 }
 
 - (void)pushNextVC:(UIViewController *)VC{

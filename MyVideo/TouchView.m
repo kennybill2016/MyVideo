@@ -77,7 +77,7 @@
 }
 
 - (void)touchBegin{
-    if (NSFoundationVersionNumber < NSFoundationVersionNumber_iOS_8_0) {
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_8_0) {
         LAContext *context = [[LAContext alloc] init];
         context.localizedCancelTitle = @"取消";
         NSError *error = nil;
@@ -86,7 +86,9 @@
                 
                 if (success) {
                     NSLog(@"TouchID 验证成功");
-                    [self removeFromSuperview];
+                    
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"removeFromSuperView" object:nil userInfo:@{}];
+                    
                 }else if (error){
                     
                     switch (error.code) {

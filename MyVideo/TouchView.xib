@@ -56,41 +56,50 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ft-XN-MBV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8Pt-TX-wtB">
                     <rect key="frame" x="50" y="152" width="275" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" secureTextEntry="YES"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKo-gG-dcd">
-                    <rect key="frame" x="145" y="247" width="85" height="30"/>
-                    <state key="normal" title="touchID解锁"/>
-                    <connections>
-                        <action selector="touchIDButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="0cO-GE-hjn"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WS8-Cz-fpc">
-                    <rect key="frame" x="145" y="202" width="85" height="30"/>
-                    <state key="normal" title="确认"/>
-                    <connections>
-                        <action selector="sureButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="3wi-0X-lrJ"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBF-sI-Fpz">
                     <rect key="frame" x="188" y="144" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WS8-Cz-fpc">
+                    <rect key="frame" x="145" y="202" width="85" height="30"/>
+                    <state key="normal" title="确认">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sureButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="3wi-0X-lrJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKo-gG-dcd">
+                    <rect key="frame" x="145" y="247" width="85" height="30"/>
+                    <state key="normal" title="touchID解锁">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="touchIDButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="0cO-GE-hjn"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="8ft-XN-MBV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0eI-bH-Y4Z"/>
                 <constraint firstItem="fA0-wf-64q" firstAttribute="leading" secondItem="r8m-xR-FO8" secondAttribute="trailing" constant="30" id="1Sc-8L-0LU"/>
                 <constraint firstItem="fA0-wf-64q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="1wq-Hb-jwj"/>
                 <constraint firstItem="VAD-sN-PMi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="5fx-xq-xmE"/>
                 <constraint firstItem="8Pt-TX-wtB" firstAttribute="top" secondItem="sBF-sI-Fpz" secondAttribute="bottom" constant="8" id="6Vw-Wj-caJ"/>
                 <constraint firstItem="WS8-Cz-fpc" firstAttribute="top" secondItem="8Pt-TX-wtB" secondAttribute="bottom" constant="20" id="8Bb-SS-8w5"/>
                 <constraint firstItem="VAD-sN-PMi" firstAttribute="width" secondItem="r8m-xR-FO8" secondAttribute="width" id="9DA-Fm-kcA"/>
+                <constraint firstItem="8ft-XN-MBV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DZj-1z-oey"/>
                 <constraint firstItem="r8m-xR-FO8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="JPc-fP-EeV"/>
                 <constraint firstItem="lKo-gG-dcd" firstAttribute="width" secondItem="WS8-Cz-fpc" secondAttribute="width" id="Leh-yR-4AQ"/>
                 <constraint firstItem="8Pt-TX-wtB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="Mpa-Xb-Iqn"/>
@@ -98,10 +107,12 @@
                 <constraint firstItem="VAD-sN-PMi" firstAttribute="leading" secondItem="fA0-wf-64q" secondAttribute="trailing" constant="30" id="TMY-vL-2Ab"/>
                 <constraint firstItem="OZl-JN-XcC" firstAttribute="width" secondItem="r8m-xR-FO8" secondAttribute="width" id="Txn-wt-G7L"/>
                 <constraint firstAttribute="trailing" secondItem="OZl-JN-XcC" secondAttribute="trailing" constant="50" id="Uba-FI-5gG"/>
+                <constraint firstAttribute="trailing" secondItem="8ft-XN-MBV" secondAttribute="trailing" id="YaY-gI-Wgi"/>
                 <constraint firstItem="lKo-gG-dcd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cQS-aS-tmQ"/>
                 <constraint firstItem="r8m-xR-FO8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="cra-DE-4Se"/>
                 <constraint firstItem="OZl-JN-XcC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="fEs-dz-zhE"/>
                 <constraint firstAttribute="trailing" secondItem="8Pt-TX-wtB" secondAttribute="trailing" constant="50" id="g8C-oN-D7g"/>
+                <constraint firstAttribute="bottom" secondItem="8ft-XN-MBV" secondAttribute="bottom" id="ibk-Jt-pZ8"/>
                 <constraint firstItem="WS8-Cz-fpc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="n6d-5z-QQy"/>
                 <constraint firstItem="fA0-wf-64q" firstAttribute="width" secondItem="r8m-xR-FO8" secondAttribute="width" id="pqu-WP-7y8"/>
                 <constraint firstItem="lKo-gG-dcd" firstAttribute="top" secondItem="WS8-Cz-fpc" secondAttribute="bottom" constant="15" id="tTD-uf-PlM"/>
@@ -119,4 +130,7 @@
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="back.png" width="446" height="719"/>
+    </resources>
 </document>

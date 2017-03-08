@@ -16,4 +16,6 @@
 
 - (NSString *)readLoginPassword;
 
+- (void)removeLoginPassword;
+
 @end

@@ -12,6 +12,8 @@
 #import "SaveObject.h"
 @interface AppDelegate ()
 
+@property (nonatomic,strong) TouchView *touch;
+
 @end
 
 @implementation AppDelegate
@@ -27,14 +29,24 @@
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavitaionBarImage"] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeTouchIDView) name:@"removeFromSuperView" object:nil];
+    
+    
     if ([[SaveObject shared] readLoginPassword]) {
-        [self.window addSubview:[[TouchView alloc] init]];
+        self.touch = [[TouchView alloc] init];
+        [self.window addSubview:self.touch];
     }
     
     // Override point for customization after application launch.
     return YES;
 }
+- (void)removeTouchIDView{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.touch removeFromSuperview];
+        self.touch = nil;
+    });
 
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -44,7 +56,8 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     if ([[SaveObject shared] readLoginPassword]) {
-        [self.window addSubview:[[TouchView alloc] init]];
+        self.touch = [[TouchView alloc] init];
+        [self.window addSubview:self.touch];
     }
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.

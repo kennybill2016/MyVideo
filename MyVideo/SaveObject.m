@@ -29,4 +29,9 @@
     return [SFHFKeychainUtils getPasswordForUsername:@"LoginPassword"andServiceName:SERVICE_NAME error:nil];
 }
 
+- (void)removeLoginPassword{
+    [SFHFKeychainUtils deleteItemForUsername:@"LoginPassword" andServiceName:SERVICE_NAME error:nil];
+}
+
+
 @end
