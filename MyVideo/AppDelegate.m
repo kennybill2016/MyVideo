@@ -10,6 +10,7 @@
 #import "HomeVC.h"
 #import "TouchView.h"
 #import "SaveObject.h"
+
 @interface AppDelegate ()
 
 @property (nonatomic,strong) TouchView *touch;
@@ -29,7 +30,13 @@
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavitaionBarImage"] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeTouchIDView) name:@"removeFromSuperView" object:nil];
+    
+    
+    [MagicalRecord setupAutoMigratingCoreDataStack];
+    
     
     
     if ([[SaveObject shared] readLoginPassword]) {
@@ -75,6 +82,7 @@
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    [MagicalRecord cleanUp];
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 

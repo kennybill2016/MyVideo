@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:OfoMes+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:OfoMes+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:OfoMes+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:OfoMes+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
+      location = "group:MyVideo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

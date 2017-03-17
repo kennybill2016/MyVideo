@@ -57,9 +57,15 @@
 		6E4842A81E6FA3FF0097D1A0 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4842A71E6FA3FF0097D1A0 /* back.png */; };
 		6EBBD00C1E6EB3CE001B3C73 /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBBD00B1E6EB3CE001B3C73 /* TouchView.m */; };
 		6EBBD00E1E6EB3D7001B3C73 /* TouchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EBBD00D1E6EB3D7001B3C73 /* TouchView.xib */; };
+		6EC359981E7BA58000D9C7F1 /* OfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC359971E7BA58000D9C7F1 /* OfoVC.m */; };
+		6EC35A581E7BAE1D00D9C7F1 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EC35A561E7BAE1D00D9C7F1 /* UserData.xcdatamodeld */; };
+		6EC35A7F1E7BBE8C00D9C7F1 /* SaveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC35A7D1E7BBE8C00D9C7F1 /* SaveVC.m */; };
+		6EC35A801E7BBE8C00D9C7F1 /* SaveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC35A7E1E7BBE8C00D9C7F1 /* SaveVC.xib */; };
+		E4A6D8D253BAEEAB74E438EE /* Pods_MyVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27733D4015724F7730F2D32E /* Pods_MyVideo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27733D4015724F7730F2D32E /* Pods_MyVideo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyVideo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E2EAD291E6E3DCC00A22F5E /* MyVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E2EAD2D1E6E3DCC00A22F5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E2EAD2F1E6E3DCC00A22F5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,6 +165,15 @@
 		6EBBD00A1E6EB3CE001B3C73 /* TouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
 		6EBBD00B1E6EB3CE001B3C73 /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
 		6EBBD00D1E6EB3D7001B3C73 /* TouchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchView.xib; sourceTree = "<group>"; };
+		6EC359961E7BA58000D9C7F1 /* OfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfoVC.h; sourceTree = "<group>"; };
+		6EC359971E7BA58000D9C7F1 /* OfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfoVC.m; sourceTree = "<group>"; };
+		6EC35A571E7BAE1D00D9C7F1 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
+		6EC35A6C1E7BB16100D9C7F1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6EC35A7C1E7BBE8B00D9C7F1 /* SaveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveVC.h; sourceTree = "<group>"; };
+		6EC35A7D1E7BBE8C00D9C7F1 /* SaveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveVC.m; sourceTree = "<group>"; };
+		6EC35A7E1E7BBE8C00D9C7F1 /* SaveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveVC.xib; sourceTree = "<group>"; };
+		70C8297CD14FEEE53B05740E /* Pods-MyVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyVideo/Pods-MyVideo.debug.xcconfig"; sourceTree = "<group>"; };
+		CE737AC2351B1B152F5C0A73 /* Pods-MyVideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyVideo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyVideo/Pods-MyVideo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,18 +182,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E2EADB21E6E98A200A22F5E /* MediaPlayer.framework in Frameworks */,
+				E4A6D8D253BAEEAB74E438EE /* Pods_MyVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4569F4B8CDF2E883CD82A1B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70C8297CD14FEEE53B05740E /* Pods-MyVideo.debug.xcconfig */,
+				CE737AC2351B1B152F5C0A73 /* Pods-MyVideo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6E2EAD201E6E3DCC00A22F5E = {
 			isa = PBXGroup;
 			children = (
 				6E2EAD2B1E6E3DCC00A22F5E /* MyVideo */,
 				6E2EAD2A1E6E3DCC00A22F5E /* Products */,
 				6E2EAD751E6E53DD00A22F5E /* Frameworks */,
+				4569F4B8CDF2E883CD82A1B4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +219,7 @@
 		6E2EAD2B1E6E3DCC00A22F5E /* MyVideo */ = {
 			isa = PBXGroup;
 			children = (
+				6EC359951E7BA55A00D9C7F1 /* OGO */,
 				6E2EADB31E6EA8BB00A22F5E /* TOUCHID */,
 				6E2EAD7F1E6E781900A22F5E /* PLAER */,
 				6E2EAD4D1E6E4A4200A22F5E /* THIRD */,
@@ -206,6 +233,7 @@
 				6E2EAD3A1E6E3DCC00A22F5E /* LaunchScreen.storyboard */,
 				6E2EAD3D1E6E3DCC00A22F5E /* Info.plist */,
 				6E2EAD2C1E6E3DCC00A22F5E /* Supporting Files */,
+				6EC35A561E7BAE1D00D9C7F1 /* UserData.xcdatamodeld */,
 			);
 			path = MyVideo;
 			sourceTree = "<group>";
@@ -239,6 +267,7 @@
 		6E2EAD4D1E6E4A4200A22F5E /* THIRD */ = {
 			isa = PBXGroup;
 			children = (
+				6EC35A6C1E7BB16100D9C7F1 /* PrefixHeader.pch */,
 				6E4842931E6F9B210097D1A0 /* SVProgressHUD */,
 				6E48428C1E6F95990097D1A0 /* KeyChain */,
 				6E2EAD841E6E7D7E00A22F5E /* ZFPlayer */,
@@ -285,6 +314,7 @@
 				6E2EADB11E6E98A200A22F5E /* MediaPlayer.framework */,
 				6E2EAD781E6E53E400A22F5E /* CoreMedia.framework */,
 				6E2EAD761E6E53DD00A22F5E /* AVFoundation.framework */,
+				27733D4015724F7730F2D32E /* Pods_MyVideo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -390,6 +420,18 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		6EC359951E7BA55A00D9C7F1 /* OGO */ = {
+			isa = PBXGroup;
+			children = (
+				6EC359961E7BA58000D9C7F1 /* OfoVC.h */,
+				6EC359971E7BA58000D9C7F1 /* OfoVC.m */,
+				6EC35A7C1E7BBE8B00D9C7F1 /* SaveVC.h */,
+				6EC35A7D1E7BBE8C00D9C7F1 /* SaveVC.m */,
+				6EC35A7E1E7BBE8C00D9C7F1 /* SaveVC.xib */,
+			);
+			name = OGO;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -397,9 +439,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E2EAD401E6E3DCC00A22F5E /* Build configuration list for PBXNativeTarget "MyVideo" */;
 			buildPhases = (
+				1B8FA518157068DBAD3F24B8 /* [CP] Check Pods Manifest.lock */,
 				6E2EAD251E6E3DCC00A22F5E /* Sources */,
 				6E2EAD261E6E3DCC00A22F5E /* Frameworks */,
 				6E2EAD271E6E3DCC00A22F5E /* Resources */,
+				9D1AF105812175299DE8D222 /* [CP] Embed Pods Frameworks */,
+				583E7229932AC1B6CAD9C757 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -456,12 +501,61 @@
 				6E4842A41E6F9B210097D1A0 /* SVProgressHUD.bundle in Resources */,
 				6E2EAD391E6E3DCC00A22F5E /* Assets.xcassets in Resources */,
 				6E2EAD371E6E3DCC00A22F5E /* Main.storyboard in Resources */,
+				6EC35A801E7BBE8C00D9C7F1 /* SaveVC.xib in Resources */,
 				6E2EADAD1E6E7D7E00A22F5E /* ZFPlayer.bundle in Resources */,
 				6E4842A01E6F9B210097D1A0 /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B8FA518157068DBAD3F24B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		583E7229932AC1B6CAD9C757 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyVideo/Pods-MyVideo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D1AF105812175299DE8D222 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyVideo/Pods-MyVideo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E2EAD251E6E3DCC00A22F5E /* Sources */ = {
@@ -488,6 +582,7 @@
 				6E2EAD491E6E497B00A22F5E /* HomeDelegate.m in Sources */,
 				6E2EAD4C1E6E498700A22F5E /* HomeDataSouce.m in Sources */,
 				6E4842A61E6F9B210097D1A0 /* SVRadialGradientLayer.m in Sources */,
+				6EC359981E7BA58000D9C7F1 /* OfoVC.m in Sources */,
 				6E2EAD701E6E4A4A00A22F5E /* View+MASAdditions.m in Sources */,
 				6E2EAD681E6E4A4A00A22F5E /* MASCompositeConstraint.m in Sources */,
 				6E2EADB01E6E7D7E00A22F5E /* ZFPlayerView.m in Sources */,
@@ -499,6 +594,7 @@
 				6E2EADAC1E6E7D7E00A22F5E /* ZFBrightnessView.m in Sources */,
 				6E2EAD461E6E491100A22F5E /* HomeVC.m in Sources */,
 				6E4842A31E6F9B210097D1A0 /* SVProgressAnimatedView.m in Sources */,
+				6EC35A581E7BAE1D00D9C7F1 /* UserData.xcdatamodeld in Sources */,
 				6E2EADA41E6E7D7E00A22F5E /* ASValueTrackingSlider.m in Sources */,
 				6E2EAD311E6E3DCC00A22F5E /* AppDelegate.m in Sources */,
 				6E2EAD821E6E783300A22F5E /* PlayerVC.m in Sources */,
@@ -508,6 +604,7 @@
 				6E2EADA51E6E7D7E00A22F5E /* UIAlertController+ZFPlayerRotation.m in Sources */,
 				6E2EADAF1E6E7D7E00A22F5E /* ZFPlayerModel.m in Sources */,
 				6E4842A21E6F9B210097D1A0 /* SVIndefiniteAnimatedView.m in Sources */,
+				6EC35A7F1E7BBE8C00D9C7F1 /* SaveVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,9 +720,11 @@
 		};
 		6E2EAD411E6E3DCC00A22F5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70C8297CD14FEEE53B05740E /* Pods-MyVideo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BJPJ2657Q5;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyVideo/PrefixHeader.pch";
 				INFOPLIST_FILE = MyVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -637,9 +736,11 @@
 		};
 		6E2EAD421E6E3DCC00A22F5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE737AC2351B1B152F5C0A73 /* Pods-MyVideo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BJPJ2657Q5;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyVideo/PrefixHeader.pch";
 				INFOPLIST_FILE = MyVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -672,6 +773,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6EC35A561E7BAE1D00D9C7F1 /* UserData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6EC35A571E7BAE1D00D9C7F1 /* UserData.xcdatamodel */,
+			);
+			currentVersion = 6EC35A571E7BAE1D00D9C7F1 /* UserData.xcdatamodel */;
+			path = UserData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6E2EAD211E6E3DCC00A22F5E /* Project object */;
 }

@@ -12,8 +12,8 @@
 #import "HomeDelegate.h"
 #import "HomeDataModel.h"
 #import "HomeDataSouce.h"
-#import "SVProgressHUD.h"
 #import "SaveObject.h"
+#import "OfoVC.h"
 #define FILEPATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 @interface HomeVC ()<DeleDelegate,DataDelegate>
 
@@ -41,8 +41,13 @@
     rightItem.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = rightItem;
 
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"LeftBarImage"] style:UIBarButtonItemStylePlain target:self action:@selector(setController)];
-    leftItem.tintColor = [UIColor whiteColor];
+    UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [leftButton setBackgroundImage:[[UIImage imageNamed:@"LeftBarImage"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    leftButton.frame = CGRectMake(0, 0, 35, 48);
+    [leftButton addTarget:self action:@selector(setController) forControlEvents:UIControlEventTouchUpInside];
+    [leftButton addTarget:self action:@selector(ofoVC) forControlEvents:UIControlEventTouchDragExit];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
+
     self.navigationItem.leftBarButtonItem = leftItem;
     
     
@@ -126,6 +131,11 @@
 
 - (void)pushNextVC:(UIViewController *)VC{
     [self.navigationController pushViewController:VC animated:NO];
+}
+- (void)ofoVC{
+    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:[[OfoVC alloc] init]] animated:YES completion:^{
+        
+    }];
 }
 - (void)deleCell:(NSIndexPath *)indexPath{
     [self.dataModel removeObject:self.dataArr[indexPath.row]];
